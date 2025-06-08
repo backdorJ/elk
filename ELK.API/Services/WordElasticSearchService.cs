@@ -63,7 +63,7 @@ public class WordElasticSearchService(ElasticsearchClient client) : IWordElastic
             .Buckets?
             .Select(bucket => new
             {
-                Name = bucket.Key.ToString() ?? string.Empty,
+                Name = bucket.Key.ToString(),
                 Count = bucket.DocCount
             })
             .ToList();
