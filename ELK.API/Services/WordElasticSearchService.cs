@@ -56,7 +56,6 @@ public class WordElasticSearchService(ElasticsearchClient client) : IWordElastic
                     )
                 )
             )
-            .Size(10)
         );
         
         var buckets = response.Aggregations?
